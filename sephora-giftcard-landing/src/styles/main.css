@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    filter: blur(30px);
+    z-index: -1;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1, h2, h3 {
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 50px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 150, 1);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 0, 150, 1);
+    }
+}
+
+.call-to-action {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(255, 0, 150, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.call-to-action:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 150, 1);
+}
+
+.steps-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-icon {
+    font-size: 2rem;
+    color: rgba(255, 0, 150, 1);
+    margin-bottom: 10px;
+}
+
+.notice {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    animation: glow 1.5s infinite alternate;
+}
